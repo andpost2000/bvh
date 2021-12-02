@@ -1,0 +1,15 @@
+body {
+  font-family: Helvetica, sans-serif;
+  font-size: 15px;
+  margin: 0;
+  margin-bottom: $mobileMenuHeight;
+}
+
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

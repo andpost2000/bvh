@@ -117,42 +117,42 @@ function twentynineteen_post_thumbnail_sizes_attr( $attr ) {
 }
 add_filter( 'wp_get_attachment_image_attributes', 'twentynineteen_post_thumbnail_sizes_attr', 10, 1 );
 
-/**
- * Add an extra menu to our nav for our priority+ navigation to use
- *
- * @param string $nav_menu  Nav menu.
- * @param object $args      Nav menu args.
- * @return string More link for hidden menu items.
- */
-function twentynineteen_add_ellipses_to_nav( $nav_menu, $args ) {
+// /**
+//  * Add an extra menu to our nav for our priority+ navigation to use
+//  *
+//  * @param string $nav_menu  Nav menu.
+//  * @param object $args      Nav menu args.
+//  * @return string More link for hidden menu items.
+//  */
+// function twentynineteen_add_ellipses_to_nav( $nav_menu, $args ) {
 
-	if ( 'menu-1' === $args->theme_location ) :
+// 	if ( 'menu-1' === $args->theme_location ) :
 
-		$nav_menu .= '
-			<div class="main-menu-more">
-				<ul class="main-menu">
-					<li class="menu-item menu-item-has-children">
-						<button class="submenu-expand main-menu-more-toggle is-empty" tabindex="-1"
-							aria-label="' . esc_attr__( 'More', 'twentynineteen' ) . '" aria-haspopup="true" aria-expanded="false">' .
-							twentynineteen_get_icon_svg( 'arrow_drop_down_ellipsis' ) . '
-						</button>
-						<ul class="sub-menu hidden-links">
-							<li class="mobile-parent-nav-menu-item">
-								<button class="menu-item-link-return">' .
-									twentynineteen_get_icon_svg( 'chevron_left' ) .
-									esc_html__( 'Back', 'twentynineteen' ) . '
-								</button>
-							</li>
-						</ul>
-					</li>
-				</ul>
-			</div>';
+// 		$nav_menu .= '
+// 			<div class="main-menu-more">
+// 				<ul class="main-menu">
+// 					<li class="menu-item menu-item-has-children">
+// 						<button class="submenu-expand main-menu-more-toggle is-empty" tabindex="-1"
+// 							aria-label="' . esc_attr__( 'More', 'twentynineteen' ) . '" aria-haspopup="true" aria-expanded="false">' .
+// 							twentynineteen_get_icon_svg( 'arrow_drop_down_ellipsis' ) . '
+// 						</button>
+// 						<ul class="sub-menu hidden-links">
+// 							<li class="mobile-parent-nav-menu-item">
+// 								<button class="menu-item-link-return">' .
+// 									twentynineteen_get_icon_svg( 'chevron_left' ) .
+// 									esc_html__( 'Back', 'twentynineteen' ) . '
+// 								</button>
+// 							</li>
+// 						</ul>
+// 					</li>
+// 				</ul>
+// 			</div>';
 
-	endif;
+// 	endif;
 
-	return $nav_menu;
-}
-add_filter( 'wp_nav_menu', 'twentynineteen_add_ellipses_to_nav', 10, 2 );
+// 	return $nav_menu;
+// }
+// add_filter( 'wp_nav_menu', 'twentynineteen_add_ellipses_to_nav', 10, 2 );
 
 /**
  * WCAG 2.0 Attributes for Dropdown Menus

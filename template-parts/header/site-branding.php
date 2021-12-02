@@ -9,29 +9,21 @@
 ?>
 <div class="site-branding">
 
-	<?php if ( has_custom_logo() ) : ?>
-		<div class="site-logo"><?php the_custom_logo(); ?></div>
-	<?php endif; ?>
-	<?php $blog_info = get_bloginfo( 'name' ); ?>
-	<?php if ( ! empty( $blog_info ) ) : ?>
-		<?php if ( is_front_page() && is_home() ) : ?>
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-		<?php else : ?>
-			<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-		<?php endif; ?>
-	<?php endif; ?>
+  <?php if( has_custom_logo() ): the_custom_logo(); ?>
+  <?php else: ?>
+  <?php bloginfo('name'); ?>
+  <?php endif; ?>
 
-	<?php
-	$description = get_bloginfo( 'description', 'display' );
-	if ( $description || is_customize_preview() ) :
-		?>
-			<p class="site-description">
-				<?php echo $description; ?>
-			</p>
-	<?php endif; ?>
-	<?php if ( has_nav_menu( 'menu-1' ) ) : ?>
-		<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Top Menu', 'twentynineteen' ); ?>">
-			<?php
+  <?php if ( has_nav_menu( 'menu-1' ) ) : ?>
+  <div class="menu-main-wrap">
+    <nav id="site-navigation" class="main-navigation menu-main-item"
+      aria-label="<?php esc_attr_e( 'Top Menu', 'twentynineteen' ); ?>">
+
+      <button class="menu-main-button" type="button" aria-lable='menu button'>
+        <i class="fa fa-bars"></i>
+        <span>Menu</span>
+      </button>
+      <?php
 			wp_nav_menu(
 				array(
 					'theme_location' => 'menu-1',
@@ -40,11 +32,44 @@
 				)
 			);
 			?>
-		</nav><!-- #site-navigation -->
-	<?php endif; ?>
-	<?php if ( has_nav_menu( 'social' ) ) : ?>
-		<nav class="social-navigation" aria-label="<?php esc_attr_e( 'Social Links Menu', 'twentynineteen' ); ?>">
-			<?php
+    </nav><!-- #site-navigation -->
+
+    <div class="menu-main-item">
+      <button class="menu-main-button" type="button" aria-lable='menu button'>
+        <i class="fa fa-calendar"></i>
+        <span>Check in</span>
+      </button>
+      <?php get_template_part('template-parts/sections/template', 'datapicker'); ?>
+    </div>
+
+    <div class="sideContent">
+      <div class="menu-main-item">
+        <button class="menu-main-button" type="button" aria-lable='menu button'>
+          <i class="fa fa-share"></i>
+          <span>Share</span>
+        </button>
+        <?php get_template_part('template-parts/sections/template', 'social-share'); ?>
+      </div>
+      <div class="menu-main-item">
+        <a class="blogBtn menu-main-button" href="<?php the_field('blog', 'options'); ?>">
+          <i class="fa fa-rss"></i>
+          <span>Blog</span>
+        </a>
+      </div>
+      <div class="menu-main-item">
+        <button class="menu-main-button" type="button" aria-lable='menu button'>
+          <i class="fa fa-globe"></i>
+          <span>Languages</span>
+        </button>
+        <div class="langSelect"><?php do_action('icl_language_selector'); ?></div>
+      </div>
+    </div>
+  </div>
+  <?php endif; ?>
+
+  <?php if ( has_nav_menu( 'social' ) ) : ?>
+  <nav class="social-navigation" aria-label="<?php esc_attr_e( 'Social Links Menu', 'twentynineteen' ); ?>">
+    <?php
 			wp_nav_menu(
 				array(
 					'theme_location' => 'social',
@@ -55,6 +80,6 @@
 				)
 			);
 			?>
-		</nav><!-- .social-navigation -->
-	<?php endif; ?>
+  </nav><!-- .social-navigation -->
+  <?php endif; ?>
 </div><!-- .site-branding -->

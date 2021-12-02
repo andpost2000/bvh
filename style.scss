@@ -1,5 +1,9 @@
-@import "sass/normalize";
+@import "sass/variables";
 @import "sass/fonts";
+@import "sass/globals";
 
 @import "sass/blocks/container";
 @import "sass/blocks/datapicker";
+@import "sass/blocks/menu-main";
+@import "sass/blocks/site";
+@import "sass/blocks/custom-logo";

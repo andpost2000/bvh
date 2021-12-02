@@ -13,6 +13,10 @@
  * Twenty Nineteen only works in WordPress 4.7 or later.
  */
 
+add_action('after_setup_theme', function(){
+	show_admin_bar( false );
+});
+
 if ( version_compare( $GLOBALS['wp_version'], '4.7', '<' ) ) {
 	require get_template_directory() . '/inc/back-compat.php';
 	return;
@@ -89,8 +93,8 @@ if ( ! function_exists( 'twentynineteen_setup' ) ) :
 		add_theme_support(
 			'custom-logo',
 			array(
-				'height'      => 190,
-				'width'       => 190,
+				'height'      => 67,
+				'width'       => 279,
 				'flex-width'  => false,
 				'flex-height' => false,
 			)
