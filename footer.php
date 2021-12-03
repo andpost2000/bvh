@@ -17,7 +17,7 @@
 
 	<footer id="colophon" class="site-footer">
 		<?php get_template_part( 'template-parts/footer/footer', 'widgets' ); ?>
-		<div class="site-info">
+		<div class="site-info">Fz
 			<?php $blog_info = get_bloginfo( 'name' ); ?>
 			<?php if ( ! empty( $blog_info ) ) : ?>
 				<a class="site-name" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>,
@@ -53,5 +53,20 @@
 
 <?php wp_footer(); ?>
 
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+jQuery('.hero-slider__slick').slick({
+  lazyLoad: 'ondemand',
+  infinite: true,
+  autoplay: true,
+  autoplaySpeed: 5000,
+  pauseOnsHover: true,
+  pauseOnDotsHover: true,
+  arrows: true,
+  dots: true,
+  slidesToShow: 1,
+  slidesToScroll: 1
+});
+</script>
 </body>
 </html>
