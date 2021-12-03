@@ -10,7 +10,8 @@
     display: flex;
     height: $mobileMenuHeight;
     width: 100%;
-    background-color: #fff;
+    background-color: #f2f2f2;
+    z-index: 100;
 
     .sideContent {
       width: 60%;

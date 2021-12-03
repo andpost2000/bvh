@@ -1,7 +1,30 @@
 body {
   font-family: Helvetica, sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   margin: 0;
+  color: var(--colorSecondaryDark);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.btn {
+  display: block;
+  border: none;
+  padding: 5px 10px;
+  font-size: 14px;
+  line-height: 26px;
+  border-radius: 20px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.btn--blue {
+  color: #fff;
+  text-transform: uppercase;
+  background-color: var(--colorSecondary);
 }
 
 .fa {
@@ -11,4 +34,37 @@ body {
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.arrowLink {
+  background-image: url('images/blue-arrow-right.png');
+  background-repeat: no-repeat;
+  background-position: 0 center;
+  padding: 7px 0;
+  padding-left: 120px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--colorSecondaryDark);
+  font-weight: 700;
+  transition: 0.2s;
+
+  &:hover {
+    background-position: 7px center;
+  }
+
+  &:active {
+    background-position: 14px center;
+  }
+}
+
+.title {
+  font-size: 22px;
+  line-height: 1.3;
+}
+
+.subtitle {
+  font-size: 16px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  font-weight: 400;
 }

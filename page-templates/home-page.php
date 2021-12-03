@@ -2,35 +2,6 @@
 
 <?php get_header(); ?>
 <style>
-.slick-hero-slider {
-  height: 240px;
-}
-
-.slick-dotted.slick-slider {
-  margin-bottom: 30px;
-}
-
-.slick-prev {
-  left: 5px;
-}
-
-.slick-next {
-  right: 5px;
-}
-
-.slick-arrow {
-  z-index: 5;
-}
-
-.slick-track {
-  height: 240px;
-  overflow: hidden;
-}
-
-.slick-dots>li {
-  margin: 0;
-}
-
 .singleRow {
   display: none;
 }
@@ -57,77 +28,75 @@
     </div>
   </div>
 
-  <div class="col-md-12 no_padding clearfix welcomeRow singleRow">
-    <div class="col-md-3 no_padding clearfix welcomeRowLeft singleColUneven">
-      <div
-        style="background-image:url('<?php the_field('welcome_image_top'); ?>'); background-size:cover; background-position:center center; height:275px; margin-bottom:20px;">
-      </div>
-      <div
-        style="background-image:url('<?php the_field('welcome_image_bottom'); ?>'); background-size:cover; background-position:center center; height:275px;">
-      </div>
+  <div class="welcome-row single-row">
+    <div class="welcome-row__left">
+      <?php $image = get_field('welcome_image_top'); ?>
+      <img width='1000' height='667' src="<?php echo $image['sizes']['medium_large']; ?>"
+        alt="<?php echo $image['alt'] ?>">
+      <?php $image = get_field('welcome_image_bottom'); ?>
+      <img width='1000' height='667' src="<?php echo $image['sizes']['medium_large']; ?>"
+        alt="<?php echo $image['alt'] ?>">
     </div>
-    <div class="col-md-9 no_padding clearfix welcomeRowRight singleColUneven">
-      <div class="welcomeWrapper bg-logo">
-        <h1><?php the_field('welcome_title'); ?></h1>
-        <?php the_field('welcome_content'); ?>
-        <img src="<?php echo get_stylesheet_directory_uri();?>/images/olive-branch.png">
-        <div class="anchorMenuWrap">
-          <h5><?php the_field('welcome_menu_title'); ?></h5>
-          <div class="anchorMenu">
-            <?php
-								    if(get_field('welcome_menu')): ?>
-            <?php while(the_repeater_field('welcome_menu')): ?>
-
-            <?php
+    <div class="welcome-row__right">
+      <img src="<?php echo get_stylesheet_directory_uri();?>/images/olive-branch.png" alt="olive branch" width='143'
+        height='150'>
+      <h1><?php the_field('welcome_title'); ?></h1>
+      <?php the_field('welcome_content'); ?>
+      <div class="welcome-row__anchor-menu">
+        <h5><?php the_field('welcome_menu_title'); ?></h5>
+        <div class="anchorMenu">
+          <?php if(get_field('welcome_menu')): ?>
+          <?php while(the_repeater_field('welcome_menu')): ?>
+          <?php
 											  	$post_object = get_sub_field('menu_item');
 											  	if( $post_object ):
 											    $post = $post_object;
 											    setup_postdata( $post );
 											    ?>
 
-            <a class="arrowLink" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+          <a class="arrowLink" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 
-            <?php wp_reset_postdata(); ?>
-            <?php endif; ?>
+          <?php wp_reset_postdata(); ?>
+          <?php endif; ?>
 
-            <?php endwhile; ?>
-            <?php endif;
-								?>
-          </div>
+          <?php endwhile; ?>
+          <?php endif;?>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="col-md-12 no_padding clearfix roomRow singleRow">
-    <div class="col-md-9 no_padding clearfix roomRowLeft singleColUneven"
-      style="background-image:url('<?php $image = get_field('room_image'); echo($image['url']); ?>'); background-size:cover; background-position:center center; height:600px;">
+  <div class="room-row single-row">
+    <div class="room-row__left">
+      <?php $image = get_field('room_image'); ?>
+      <img width='768' height='512' src="<?php echo $image['sizes']['medium_large']; ?>"
+        alt="<?php echo $image['alt'] ?>">
     </div>
-    <div class="col-md-3 no_padding clearfix roomRowRight singleColUneven">
+    <div class="room-row__right">
       <h2><?php the_field('room_title'); ?></h2>
-
     </div>
   </div>
 
-  <div class="col-md-12 no_padding clearfix aboutRow singleRow">
-    <div class="col-md-6 no_padding clearfix aboutRowLeft my singleCol imageBoxCol"
-      style="background-image:url('<?php $image = get_field('about_image'); echo($image['sizes']['large']); ?>'); background-size:cover; background-position:center center; /*height:600px;*/">
-      <div class="imageContentWrap">
+  <div class="about-row single-row">
+    <div class="about-row__left image-box-col">
+      <?php $image = get_field('about_image'); ?>
+      <img width='768' height='512' src="<?php echo $image['sizes']['medium_large']; ?>"
+        alt="<?php echo $image['alt'] ?>">
+      <div class="image-box-col__content">
         <h3><?php the_field('about_image_title'); ?></h3>
-        <a class="blueBtn"
+        <a class="btn btn--blue"
           href="<?php the_field('about_link','options'); ?>"><?php echo __('Read more','bellavista'); ?></a>
       </div>
     </div>
-    <div class="col-md-6 no_padding clearfix aboutRowRight my singleCol">
-      <div class="contentWrapper bg-logo">
-        <h3 class="greenTitle"><?php the_field('about_title'); ?></h3>
-        <h4 class="yellowSubtitle"><?php the_field('about_subtitle'); ?></h4>
-        <?php the_field('about_content'); ?>
-        <a class="arrowLink"
-          href="<?php the_field('about_link','options'); ?>"><?php echo __('Learn more','bellavista'); ?></a>
-      </div>
+    <div class="about-row__right">
+      <h3 class="title"><?php the_field('about_title'); ?></h3>
+      <h4 class="subtitle"><?php the_field('about_subtitle'); ?></h4>
+      <?php the_field('about_content'); ?>
+      <a class="arrowLink"
+        href="<?php the_field('about_link','options'); ?>"><?php echo __('Learn more','bellavista'); ?></a>
     </div>
   </div>
+
   <div class="col-md-12 no_padding clearfix locationRow singleRow">
     <div class="col-md-12 no_padding clearfix locationRow singleColUneven imageBoxCol my"
       style="background-image:url('<?php $image = get_field('location_image_full'); echo($image['url']); ?>'); background-size:cover; background-position:center center; height:600px;">

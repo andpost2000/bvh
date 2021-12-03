@@ -1,0 +1,26 @@
+.image-box-col {
+  display: flex;
+  position: relative;
+
+  &__content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    padding: 30px;
+    background: rgba(45, 59, 66, 0.5);
+
+    h3 {
+      margin-top: 0;
+      text-transform: uppercase;
+      color: #fff;
+      text-align: center;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}

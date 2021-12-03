@@ -5,15 +5,46 @@
 
   &__title {
     h2 {
+      margin-top: 40px;
       font-weight: normal;
       text-align: center;
-      color: var(--colorDarkLight);
+      color: var(--colorSecondaryDark);
       font-size: 30px;
     }
+
     p {
       color: var(--colorDark);
       font-size: 16px;
       text-align: center;
     }
+  }
+
+  .slick-hero-slider {
+    height: 240px;
+  }
+
+  .slick-dotted.slick-slider {
+    margin-bottom: 30px;
+  }
+
+  .slick-prev {
+    left: 5px;
+  }
+
+  .slick-next {
+    right: 5px;
+  }
+
+  .slick-arrow {
+    z-index: 5;
+  }
+
+  .slick-track {
+    height: 240px;
+    overflow: hidden;
+  }
+
+  .slick-dots>li {
+    margin: 0;
   }
 }
