@@ -1,0 +1,16 @@
+.breakfast-row {
+  padding: 20px 0;
+
+  &__left {
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__right {
+    padding: 0 10px;
+  }
+}

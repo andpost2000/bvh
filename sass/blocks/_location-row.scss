@@ -1,0 +1,16 @@
+.location-row {
+  padding: 20px 0;
+
+  &__left {
+    padding: 10px;
+  }
+
+  &__right {
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+  }
+}

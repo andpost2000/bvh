@@ -1,0 +1,29 @@
+.footer-columns {
+
+  &__hover-content {
+    display: none;
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  h5 {
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    margin: 0;
+    padding: 0 20px;
+    font-size: 40px;  
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+}
