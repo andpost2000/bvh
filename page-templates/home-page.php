@@ -16,7 +16,7 @@
     <div class="hero-slider__slick">
 
       <?php foreach( $images as $image ): ?>
-      <img height="240" src="<?php echo $image['sizes']['large']; ?>" />
+      <div><img height="250" width='360' data-lazy="<?php echo $image['sizes']['mobile']; ?>" /></div>
       <?php endforeach; ?>
 
     </div>

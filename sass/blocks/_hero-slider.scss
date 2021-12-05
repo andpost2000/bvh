@@ -45,7 +45,17 @@
 
   .slick-track {
     height: 250px;
-    overflow: hidden;
+
+    > div {
+      height: inherit;
+      width: inherit;
+      overflow: hidden;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 
   .slick-dots>li {

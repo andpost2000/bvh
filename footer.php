@@ -53,7 +53,7 @@
 
 <?php wp_footer(); ?>
 
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script type="text/javascript" src="<?PHP echo get_theme_file_uri( '/js/slick.min.js' ) ?>"></script>
 <script>
 jQuery('.hero-slider__slick').slick({
   lazyLoad: 'ondemand',
