@@ -31,14 +31,14 @@
   <div class="welcome-row single-row">
     <div class="welcome-row__left">
       <?php $image = get_field('welcome_image_top'); ?>
-      <img width='1000' height='667' src="<?php echo $image['sizes']['medium_large']; ?>"
+      <img class="lozad" width='1000' height='667' data-src="<?php echo $image['sizes']['mobile']; ?>"
         alt="<?php echo $image['alt'] ?>">
       <?php $image = get_field('welcome_image_bottom'); ?>
-      <img width='1000' height='667' src="<?php echo $image['sizes']['medium_large']; ?>"
+      <img class="lozad" width='1000' height='667' data-src="<?php echo $image['sizes']['mobile']; ?>"
         alt="<?php echo $image['alt'] ?>">
     </div>
     <div class="welcome-row__right">
-      <img src="<?php echo get_stylesheet_directory_uri();?>/images/olive-branch.png" alt="olive branch" width='143'
+      <img class="lozad" data-src="<?php echo get_stylesheet_directory_uri();?>/images/olive-branch.png" alt="olive branch" width='143'
         height='150'>
       <h1><?php the_field('welcome_title'); ?></h1>
       <?php the_field('welcome_content'); ?>
@@ -69,7 +69,7 @@
   <div class="room-row single-row">
     <div class="room-row__left">
       <?php $image = get_field('room_image'); ?>
-      <img width='768' height='512' src="<?php echo $image['sizes']['medium_large']; ?>"
+      <img class="lozad" width='768' height='512' data-src="<?php echo $image['sizes']['mobile']; ?>"
         alt="<?php echo $image['alt'] ?>">
     </div>
     <div class="room-row__right">
@@ -80,7 +80,7 @@
   <div class="about-row single-row">
     <div class="about-row__left image-box-col">
       <?php $image = get_field('about_image'); ?>
-      <img width='768' height='512' src="<?php echo $image['sizes']['medium_large']; ?>"
+      <img class="lozad" width='768' height='512' data-src="<?php echo $image['sizes']['mobile']; ?>"
         alt="<?php echo $image['alt'] ?>">
       <div class="image-box-col__content">
         <h3><?php the_field('about_image_title'); ?></h3>
@@ -100,7 +100,7 @@
   <div class="location-row single-row">
     <div class="about-row__left image-box-col">
       <?php $image = get_field('location_image_full'); ?>
-      <img width='768' height='512' src="<?php echo $image['sizes']['medium_large']; ?>"
+      <img class="lozad" width='768' height='512' data-src="<?php echo $image['sizes']['mobile']; ?>"
         alt="<?php echo $image['alt'] ?>">
       <div class="image-box-col__content">
         <h3><?php the_field('location_image_title'); ?></h3>
@@ -117,11 +117,11 @@
       <?php the_field('location_content'); ?>
       <a class="arrowLink"
         href="<?php the_field('location_link','options'); ?>"><?php echo __('Learn More','bellavista'); ?></a>
-      <!-- <img src="<?php echo get_stylesheet_directory_uri();?>/images/olive-branch-2.png"> -->
+      <!-- <img class="lozad" data-src="<?php echo get_stylesheet_directory_uri();?>/images/olive-branch-2.png"> -->
     </div>
     <div class="location-row__right">
       <?php $image = get_field('location_image'); ?>
-      <img width='768' height='512' src="<?php echo $image['sizes']['medium_large']; ?>"
+      <img class="lozad" width='768' height='512' data-src="<?php echo $image['sizes']['mobile']; ?>"
         alt="<?php echo $image['alt'] ?>">
     </div>
   </div>
@@ -129,7 +129,7 @@
   <div class="facilities-row single-row">
     <div class="facilities-row__left">
       <?php $image = get_field('facilities_image'); ?>
-      <img width='768' height='512' src="<?php echo $image['sizes']['medium_large']; ?>"
+      <img class="lozad" width='768' height='512' data-src="<?php echo $image['sizes']['mobile']; ?>"
         alt="<?php echo $image['alt'] ?>">
     </div>
     <div class="facilities-row__center">
@@ -146,7 +146,7 @@
   <div class="breakfast-row single-row">
     <div class="breakfast-row__left image-box-col">
       <?php $image = get_field('breakfast_image'); ?>
-      <img width='768' height='512' src="<?php echo $image['sizes']['medium_large']; ?>"
+      <img class="lozad" width='768' height='512' data-src="<?php echo $image['sizes']['mobile']; ?>"
         alt="<?php echo $image['alt'] ?>">
       <div class="image-box-col__content">
         <h3><?php the_field('breakfast_image_title'); ?></h3>

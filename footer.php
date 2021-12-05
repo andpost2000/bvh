@@ -67,6 +67,10 @@ jQuery('.hero-slider__slick').slick({
   slidesToShow: 1,
   slidesToScroll: 1
 });
+
+
+const observer = lozad('.lozad'); // lazy loads elements with default selector as '.lozad'
+observer.observe();
 </script>
 </body>
 </html>

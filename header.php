@@ -18,7 +18,7 @@
   <?php wp_head(); ?>
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
-
+  <script type="text/javascript" src="<?PHP echo get_theme_file_uri( '/js/lozad.min.js' ) ?>"></script>
 </head>
 
 <body <?php body_class(); ?>>
