@@ -45,8 +45,8 @@
     <div class="sideContent">
       <div class="menu-main-item">
         <button class="menu-main-button" type="button" aria-lable='menu button'>
-          <i class="fa fa-share"></i>
-          <span>Share</span>
+          <i class="fa fa-hotel"></i>
+          <span>Rooms</span>
         </button>
         <?php get_template_part('template-parts/sections/template', 'social-share'); ?>
       </div>

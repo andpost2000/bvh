@@ -119,6 +119,7 @@ var svgstore = require("gulp-svgstore");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var del = require("del");
+var webp = require('gulp-webp');
 
 // для css
 gulp.task("css", function () {
@@ -187,20 +188,20 @@ gulp.task("copy", function() {
 
 // для оптимизации изображений
 gulp.task("images", function() {
-  return gulp.src("source/img/**/*.{png,jpg,svg}")
+  return gulp.src("uploads/**/*.{png,jpg,svg}")
   .pipe(imagemin([
     imagemin.optipng({optimizationLevel: 3}),
     imagemin.jpegtran({progressive: true}),
     imagemin.svgo()
   ]))
-  .pipe(gulp.dest("source/img"));
+  .pipe(gulp.dest("img-optimize"));
 });
 
 // для перевода картинок в webp
 gulp.task("webp", function() {
-  return gulp.src("source/img/**/*.{png,jpg}")
-  .pipe(webp({quality: 90}))
-  .pipe(gulp.dest("source/img"));
+  return gulp.src("uploads/**/*.{png,jpg}")
+  .pipe(webp({quality: 85}))
+  .pipe(gulp.dest("img-optimize"));
 });
 
 // для создания svg спрайта
@@ -214,5 +215,5 @@ gulp.task("sprite", function() {
 });
 
 gulp.task("clean", function() {return del("assets");});
-gulp.task("build", gulp.series("clean", "css"));
-gulp.task("start", gulp.series("build", "server"));
+gulp.task("build", gulp.series("clean", "css", "images", "webp"));
+gulp.task("start", gulp.series("clean", "css", "server"));

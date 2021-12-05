@@ -57,6 +57,8 @@ if ( ! function_exists( 'twentynineteen_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 		set_post_thumbnail_size( 1568, 9999 );
+    add_image_size( 'mobile', 540, 99999 );
+    add_image_size( 'desktop', 1280, 99999 );
 
 		// This theme uses wp_nav_menu() in two locations.
 		register_nav_menus(
