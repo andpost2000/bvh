@@ -58,7 +58,7 @@
 jQuery('.hero-slider__slick').slick({
   lazyLoad: 'ondemand',
   infinite: true,
-  autoplay: true,
+  autoplay: false,
   autoplaySpeed: 5000,
   pauseOnsHover: true,
   pauseOnDotsHover: true,
