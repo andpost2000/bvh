@@ -15,11 +15,11 @@
   <?php endif; ?>
 
   <?php if ( has_nav_menu( 'menu-1' ) ) : ?>
-  <div class="menu-main-wrap">
+  <div id="menu-main-wrap" class="menu-main-wrap">
     <nav id="site-navigation" class="main-navigation menu-main-item"
       aria-label="<?php esc_attr_e( 'Top Menu', 'twentynineteen' ); ?>">
 
-      <button class="menu-main-button" type="button" aria-lable='menu button'>
+      <button id="menu-main-button" class="menu-main-button" type="button" aria-lable='menu button'>
         <i class="fa fa-bars"></i>
         <span>Menu</span>
       </button>
@@ -27,7 +27,7 @@
 			wp_nav_menu(
 				array(
 					'theme_location' => 'menu-1',
-					'menu_class'     => 'main-menu',
+					'menu_class'     => 'menu-list',
 					'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
 				)
 			);

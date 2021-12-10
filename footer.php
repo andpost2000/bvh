@@ -87,6 +87,7 @@ jQuery('.hero-slider__slick').slick({
 const observer = lozad('.lozad'); // lazy loads elements with default selector as '.lozad'
 observer.observe();
 </script>
+<script type="text/javascript" src="<?PHP echo get_theme_file_uri( '/js/main.js' ) ?>"></script>
 </body>
 
 </html>

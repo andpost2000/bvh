@@ -1,0 +1,135 @@
+.menu {
+  &-list {
+    list-style: none;
+    margin: 0;
+    padding: 20px 0;
+    width: 85%;
+    max-height: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: var(--colorSecondaryDark);
+
+    ul {
+      list-style: none;
+    }
+
+    .sub-menu {
+      overflow: hidden;
+      padding-left: 15px;
+      flex-grow: 1;
+      max-height: 0;
+      transition: 0.25s ease-in-out;
+
+      & li > a {
+        color: white;
+      }
+    }
+  }
+
+  &-item {
+    $size: 50px;
+
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid #000;
+    list-style: none;
+
+    a {
+      width: 100%;
+      padding: 15px;
+      font-size: 20px;
+      line-height: 20px;
+      color: var(--colorPrimaryLight);
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    &.menu-item-has-children {
+      a {
+        color: gold;
+
+        &.open ~ .sub-menu {
+          max-height: 1000px;
+        }
+
+        &.open + .submenu-expand {
+          transform: rotate(0deg);
+        }
+      }
+
+      .menu-item {
+        border-top: 1px solid #000;
+        border-bottom: none;
+      }
+    }
+
+    .submenu-expand {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+      color: inherit;
+      width: $size;
+      height: $size;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      padding: 0;
+      -webkit-filter: invert(1); /* Safari 6.0 - 9.0 */
+      filter: invert(1);
+      transform: rotate(-90deg);
+      transition: 0.25s ease-in-out;
+      pointer-events: none;
+    }
+
+    .menu-item-link-return {
+      display: none;
+    }
+  }
+
+  &-main-menu-container {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    animation: openMenu 0.3s;
+
+    &.open {
+      display: block;
+      opacity: 1;
+
+      &::after {
+        position: absolute;
+        top: 2px;
+        right: 5px;
+        content: "\f00d";
+        font-family: FontAwesome;
+        font-size: 35px;
+        line-height: 35px;
+        color: white;
+      }
+    }
+  }
+}
+
+
+@keyframes openMenu {
+  0% {
+    opacity: 0;
+  }  
+  100% {
+    opacity: 1;
+  }
+}

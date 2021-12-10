@@ -29,10 +29,6 @@
     width: 20%;
   }
 
-  &-menu-container {
-    display: none;
-  }
-
   &-button {
     height: 100%;
     width: 100%;
@@ -48,13 +44,21 @@
     border: 0;
     text-decoration: none;
     outline: none;
+    transition: 0.15s;
+
+    &:active {
+      color: var(--colorSecondaryDark);
+      background-color: var(--colorSecondary);
+    }
 
     i {
       margin-bottom: 4px;
+      pointer-events: none;
     }
 
     span {
       font-size: 13px;
+      pointer-events: none;
     }
   }
 }
