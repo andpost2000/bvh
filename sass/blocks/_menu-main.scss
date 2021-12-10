@@ -44,10 +44,11 @@
     border: 0;
     text-decoration: none;
     outline: none;
-    transition: 0.15s;
+    transition: 0.1s;
 
+    &.open,
     &:active {
-      color: var(--colorSecondaryDark);
+      color: #fff;
       background-color: var(--colorSecondary);
     }
 

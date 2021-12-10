@@ -10,24 +10,24 @@
 ?>
 
 
-<div class="datapicker">
+<div class="check-in-form-container">
 
   <form action="https://bellavistacorfu.reserve-online.net/" method="post" class="my-calendar-form" target="_blank">
     <div class="calendar-input-wrap">
       <input type="hidden" name="lang" value="en_GB">
       <h5 class="calendarTitle"><?php the_field('calendar_title','options'); ?></h5>
-      <div class="singleFormBox">
+      <div class="singleFormBox singleFormBox--first">
         <!-- <label for="checkin"><?php echo __('Check-In','bellavista'); ?></label> -->
         <input id="checkin" type="text" class="arrival" name="checkin" size="12" readonly maxlength="10"
           placeholder="<?php echo __('Check-In','bellavista'); ?>">
       </div>
-      <div class="singleFormBox">
+      <div class="singleFormBox singleFormBox--second">
         <!-- <label for="checkin"><?php echo __('Check-Out','bellavista'); ?></label> -->
         <input id="checkout" type="text" class="departure" name="checkout" size="12" readonly maxlength="10"
           placeholder="<?php echo __('Check-Out','bellavista'); ?>">
       </div>
+      <button type="submit" class="prime"><?php echo __('Check Availability','bellavista'); ?></button>
     </div>
-    <button type="submit" class="prime"><?php echo __('Check Availability','bellavista'); ?></button>
   </form>
 
 </div>

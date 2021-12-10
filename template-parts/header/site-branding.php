@@ -35,7 +35,7 @@
     </nav><!-- #site-navigation -->
 
     <div class="menu-main-item">
-      <button class="menu-main-button" type="button" aria-lable='menu button'>
+      <button id="check-in-button" class="menu-main-button" type="button" aria-lable='menu button'>
         <i class="fa fa-calendar"></i>
         <span>Check in</span>
       </button>
