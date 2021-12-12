@@ -20,7 +20,7 @@
       max-height: 0;
       transition: 0.25s ease-in-out;
 
-      & li > a {
+      & li>a {
         color: white;
       }
     }
@@ -40,7 +40,7 @@
     a {
       width: 100%;
       padding: 15px;
-      font-size: 20px;
+      font-size: 18px;
       line-height: 20px;
       color: var(--colorPrimaryLight);
       text-transform: uppercase;
@@ -51,11 +51,11 @@
       a {
         color: gold;
 
-        &.open ~ .sub-menu {
+        &.open~.sub-menu {
           max-height: 1000px;
         }
 
-        &.open + .submenu-expand {
+        &.open+.submenu-expand {
           transform: rotate(0deg);
         }
       }
@@ -81,7 +81,8 @@
       border: none;
       outline: none;
       padding: 0;
-      -webkit-filter: invert(1); /* Safari 6.0 - 9.0 */
+      -webkit-filter: invert(1);
+      /* Safari 6.0 - 9.0 */
       filter: invert(1);
       transform: rotate(-90deg);
       transition: 0.25s ease-in-out;
@@ -92,34 +93,34 @@
       display: none;
     }
   }
+}
 
-  &-main-menu-container {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    max-height: 100vh;
-    background-color: rgba(0, 0, 0, 0.4);
-    opacity: 0;
-    animation: openMenu 0.3s;
+#menu-main-button+div {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  animation: openMenu 0.3s;
 
-    &.open {
-      display: block;
-      opacity: 1;
+  &.open {
+    display: block;
+    opacity: 1;
 
-      &::after {
-        position: absolute;
-        top: 2px;
-        right: 5px;
-        content: "\f00d";
-        font-family: FontAwesome;
-        font-size: 35px;
-        line-height: 35px;
-        color: white;
-      }
+    &::after {
+      position: absolute;
+      top: 2px;
+      right: 5px;
+      content: "\f00d";
+      font-family: FontAwesome;
+      font-size: 35px;
+      line-height: 35px;
+      color: white;
     }
   }
 }

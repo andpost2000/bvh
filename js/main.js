@@ -1,17 +1,17 @@
 const subMenuLinks = document.querySelectorAll('.menu-item-has-children > a');
 const mainMenu = document.querySelector('#menu-main-wrap');
-const mainMenuContainer = document.querySelector('.menu-main-menu-container');
+const mainMenuContainer = document.querySelector('#menu-main-button + div');
 const checkInContainer = document.querySelector('.check-in-form-container');
 const langSelect = document.querySelector('.lang-select');
+
+mainMenuContainer.addEventListener('click', () => {
+  mainMenuContainer.classList.remove('open');
+});
 
 mainMenu.addEventListener('click', (evt) => {
   console.log(evt.target);
   if (evt.target.id == 'menu-main-button') {
     mainMenuContainer.classList.add('open');
-  }
-
-  if (evt.target.classList.contains('menu-main-menu-container')) {
-    mainMenuContainer.classList.remove('open');
   }
 
   if (evt.target.id === 'check-in-button') {
