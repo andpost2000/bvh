@@ -60,11 +60,11 @@
           <?php
             $langFlagsUrl = get_site_url();
             $lang = 'en';
-            if (stripos(get_page_link(), 'hotel/el')) {
+            if (stripos(get_page_link(), '/el')) {
               $lang = 'el';
-            } elseif (stripos(get_page_link(), 'hotel/ru')) {
+            } elseif (stripos(get_page_link(), '/ru')) {
               $lang = 'ru';
-            } elseif (stripos(get_page_link(), 'hotel/it')) {
+            } elseif (stripos(get_page_link(), '/it')) {
               $lang = 'it';
             }
           ?>
