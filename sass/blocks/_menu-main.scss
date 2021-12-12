@@ -46,6 +46,14 @@
     outline: none;
     transition: 0.1s;
 
+    .menu-main-lang-icon {
+      height: 25px;
+      width: 28px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
     &.open,
     &:active {
       color: #fff;

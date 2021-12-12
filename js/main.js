@@ -2,6 +2,7 @@ const subMenuLinks = document.querySelectorAll('.menu-item-has-children > a');
 const mainMenu = document.querySelector('#menu-main-wrap');
 const mainMenuContainer = document.querySelector('.menu-main-menu-container');
 const checkInContainer = document.querySelector('.check-in-form-container');
+const langSelect = document.querySelector('.lang-select');
 
 mainMenu.addEventListener('click', (evt) => {
   console.log(evt.target);
@@ -16,6 +17,11 @@ mainMenu.addEventListener('click', (evt) => {
   if (evt.target.id === 'check-in-button') {
     evt.target.classList.toggle('open');
     checkInContainer.classList.toggle('open');
+  }
+
+  if (evt.target.id === 'lang-button') {
+    evt.target.classList.toggle('open');
+    langSelect.classList.toggle('open');
   }
 });
 

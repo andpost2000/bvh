@@ -1,0 +1,50 @@
+.lang-select {
+  display: none;
+  position: absolute;
+  right: 0;
+  bottom: 100%;
+  width: 100%;
+  max-width: 100%;
+  background-color: var(--colorSecondary);
+  opacity: 0;
+  animation: openMenu 0.3s;
+
+  &.open {
+    display: block;
+    opacity: 1;
+  }
+
+  .wpml-ls {
+    width: 100%;
+    border-left-color: var(--colorSecondary);
+    border-right-color: var(--colorSecondary);
+    &-item {
+      width: 100%;
+      a {
+        position: relative;
+        width: 100%;
+        padding: 10px 5px;
+        padding-left: 35px;
+        line-height: 13px;
+        color: white;
+
+        &::before {
+          display: block;
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 5px;
+          width: 20px;
+          height: 20px;
+          transform: translateY(-50%);
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+        }
+      }
+    }
+    &-current-language>a {
+      color: var(--colorSecondary);
+    }
+  }
+}

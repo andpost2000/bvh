@@ -57,11 +57,42 @@
         </a>
       </div>
       <div class="menu-main-item">
-        <button class="menu-main-button" type="button" aria-lable='menu button'>
-          <i class="fa fa-globe"></i>
-          <span>Languages</span>
+          <?php
+            $langFlagsUrl = get_site_url();
+            $lang = 'en';
+            if (stripos(get_page_link(), 'hotel/el')) {
+              $lang = 'el';
+            } elseif (stripos(get_page_link(), 'hotel/ru')) {
+              $lang = 'ru';
+            } elseif (stripos(get_page_link(), 'hotel/it')) {
+              $lang = 'it';
+            }
+          ?>
+          <style>
+            .menu-main-lang-icon--en,
+            .wpml-ls-item-en a::before {
+              background-image: url('<?PHP echo $langFlagsUrl ?>/wp-content/plugins/sitepress-multilingual-cms/res/flags/en.png');
+            }
+            .menu-main-lang-icon--el,
+            .wpml-ls-item-el a::before {
+              background-image: url('<?PHP echo $langFlagsUrl ?>/wp-content/plugins/sitepress-multilingual-cms/res/flags/el.png');
+            }
+            .menu-main-lang-icon--ru,
+            .wpml-ls-item-ru a::before {
+              background-image: url('<?PHP echo $langFlagsUrl ?>/wp-content/plugins/sitepress-multilingual-cms/res/flags/ru.png');
+            }
+            .menu-main-lang-icon--it,
+            .wpml-ls-item-it a::before {
+              background-image: url('<?PHP echo $langFlagsUrl ?>/wp-content/plugins/sitepress-multilingual-cms/res/flags/it.png');
+            }
+          </style>
+        <button class="menu-main-button" id="lang-button" type="button" aria-lable='menu button'>
+          <i class="menu-main-lang-icon menu-main-lang-icon--<?php echo $lang ?>"></i>
+          <span style="text-transform: uppercase"><?php echo $lang === 'el' ? 'gr' : $lang ?></span>
         </button>
-        <div class="langSelect"><?php do_action('icl_language_selector'); ?></div>
+        <div class="lang-select">
+          <?php do_action('icl_language_selector'); ?>
+        </div>
       </div>
     </div>
   </div>

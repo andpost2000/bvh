@@ -1,1 +1,4 @@
 cd host1642918.hostland.pro/htdocs/www/wp-content/themes/bvh && git pull
+
+del file = rm 'file_name'
+del catalog = rm -rf 'dir_name'
