@@ -45,6 +45,7 @@
     text-decoration: none;
     outline: none;
     transition: 0.1s;
+    cursor: pointer;
 
     .menu-main-lang-icon {
       height: 25px;
@@ -68,6 +69,53 @@
     span {
       font-size: 13px;
       pointer-events: none;
+    }
+  }
+}
+
+
+@media (min-width: 1280px) {
+  .menu-main {
+    &-wrap {
+      width: calc(100% - 150px);
+      height: 60px;
+      display: flex;
+      position: relative;
+      bottom: unset;
+      background-color: #fff;
+
+      .sideContent {
+        width: auto;
+
+        .menu-main-item {
+          width: 60px;
+        }
+      }
+    }
+
+    &-item {
+      width: 60px;
+      height: 60px;
+
+      &.main-navigation {
+        width: auto;
+        margin: 0 auto;
+
+        .menu-main-button {
+          display: none;
+        }
+
+        #menu-main-button+div {
+          display: block;
+          animation: unset;
+          opacity: 1;
+          position: relative;
+          top: unset;
+          left: unset;
+          width: auto;
+          height: auto;
+        }
+      }
     }
   }
 }

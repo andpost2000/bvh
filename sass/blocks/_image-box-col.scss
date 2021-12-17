@@ -24,3 +24,12 @@
     height: auto;
   }
 }
+
+
+@media (min-width: 768px) {
+  .image-box-col {
+    &__content {
+      width: 300px;
+    }
+  }
+}

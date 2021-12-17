@@ -1,4 +1,4 @@
-.location-row {
+.benitses-row {
   padding: 20px 0;
 
   &__left {
@@ -16,15 +16,15 @@
 }
 
 @media (min-width: 1280px) {
-  .location-row {
+  .benitses-row {
+    display: flex;
+
+    &__left {
+      width: 40%;
+    }
 
     &__right {
-      display: flex;
-      justify-content: space-around;
-
-      img {
-        width: 48%;
-      }
+      width: 60%;
     }
   }
 }

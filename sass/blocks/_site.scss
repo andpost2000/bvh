@@ -5,3 +5,13 @@
     justify-content: center;
   }
 }
+
+@media (min-width: 1280px) {
+  .site {
+    &-branding {
+      position: relative;
+      padding: 5px 0;
+      width: 1280px;
+    }
+  }
+}

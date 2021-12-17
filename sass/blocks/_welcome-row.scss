@@ -43,3 +43,55 @@
     }
   }
 }
+
+
+@media (min-width: 768px) {
+  .welcome-row {
+
+    &__left {
+      display: flex;
+      justify-content: space-around;
+
+      img {
+        width: 48%;
+      }
+    }
+
+    &__right {
+      margin-top: 10px;
+    }
+  }
+}
+
+
+@media (min-width: 1280px) {
+  .welcome-row {
+    width: calc(100% - 80px);
+    margin-left: 40px;
+    margin-right: 40px;
+    display: flex;
+
+    &__left {
+      display: block;
+      width: 40%;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &__right {
+      width: 60%;
+      margin-top: 0;
+      padding-left: 60px;
+
+      h1 {
+        margin-top: 0;
+      }
+
+      p:first-of-type {
+        width: 75%;
+      }
+    }
+  }
+}

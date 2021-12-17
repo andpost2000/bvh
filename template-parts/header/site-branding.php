@@ -48,7 +48,6 @@
           <i class="fa fa-hotel"></i>
           <span>Rooms</span>
         </button>
-        <?php get_template_part('template-parts/sections/template', 'social-share'); ?>
       </div>
       <div class="menu-main-item">
         <a class="blogBtn menu-main-button" href="<?php the_field('blog', 'options'); ?>">

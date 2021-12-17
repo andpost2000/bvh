@@ -21,3 +21,20 @@
     }
   }
 }
+@media (min-width: 768px) {
+  .room-row {
+    display: flex;
+
+    &__left {
+      width: 70%;
+    }
+
+    &__right {
+      display: flex;
+      align-items: center;
+      width: 30%;
+      padding-left: 20px;
+      padding-right: 0;
+    }
+  }
+}

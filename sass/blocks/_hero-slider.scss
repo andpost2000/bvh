@@ -1,4 +1,6 @@
 .hero-slider {
+  $slideHeight: 500px;
+
   padding-bottom: 20px;
   margin-bottom: 40px;
   background-color: var(--colorPrimary);
@@ -6,6 +8,7 @@
 
   &__title {
     padding: 0 30px;
+
     h2 {
       margin-top: 40px;
       font-weight: normal;
@@ -22,7 +25,7 @@
   }
 
   &__slick {
-    height: 250px;
+    height: $slideHeight;
   }
 
   .slick-hero-slider {
@@ -50,9 +53,9 @@
   }
 
   .slick-track {
-    height: 250px;
+    height: $slideHeight;
 
-    > div {
+    >div {
       height: inherit;
       width: inherit;
       overflow: hidden;
@@ -66,5 +69,38 @@
 
   .slick-dots>li {
     margin: 0;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero-slider {
+    width: calc(100% - 80px);
+    margin-left: 40px;
+    margin-right: 40px;
+
+    .slick-track {
+      img {
+        object-fit: cover;
+        height: 100%;
+      }
+    }
+
+    .slick-next {
+      right: -25px;
+      &::before {
+        color: #000;
+        font-size: 30px;
+        padding: 10px;
+      }
+    }
+
+    .slick-prev {
+      left: -55px;
+      &::before {
+        color: #000;
+        font-size: 30px;
+        padding: 10px;
+      }
+    }
   }
 }

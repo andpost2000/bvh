@@ -14,3 +14,21 @@
     padding: 0 10px;
   }
 }
+
+
+@media (min-width: 1280px) {
+  .breakfast-row {
+    display: flex;
+
+    &__left {
+      width: 60%;
+      order: 2;
+    }
+
+    &__right {
+      order: 1;
+      padding-right: 40px;
+      width: 40%;
+    }
+  }
+}

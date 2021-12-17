@@ -40,6 +40,11 @@ body {
   font-weight: 700;
   transition: 0.2s;
 
+  &--white {
+    color: #fff;
+    background-image: url('images/white-arrow-right.png');
+  }
+
   &:hover {
     background-position: 7px center;
   }

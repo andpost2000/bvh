@@ -38,3 +38,29 @@
     }
   }
 }
+
+
+@media (min-width: 1280px) {
+  .facilities-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    &__center {
+      padding: 0 20px;
+    }
+
+    &__left img {
+      height: 100%;
+      object-fit: cover;
+    }
+    &__right {
+      font-size: 18px;
+      line-height: 28px;
+      padding-left: 18px;
+
+      p {
+        padding-left: 27px;
+      }
+    }
+  }
+}

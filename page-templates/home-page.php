@@ -16,7 +16,7 @@
     <div class="hero-slider__slick">
 
       <?php foreach( $images as $image ): ?>
-      <div><img height="250" width='360' data-lazy="<?php echo $image['sizes']['mobile']; ?>" /></div>
+      <div><img height="250" width='360' data-lazy="<?php echo $image['sizes']['desktop']; ?>" /></div>
       <?php endforeach; ?>
 
     </div>
@@ -98,7 +98,7 @@
   </div>
 
   <div class="location-row single-row">
-    <div class="about-row__left image-box-col">
+    <div class="location-row__left image-box-col">
       <?php $image = get_field('location_image_full'); ?>
       <img class="lozad" width='768' height='512' data-src="<?php echo $image['sizes']['mobile']; ?>"
         alt="<?php echo $image['alt'] ?>">
@@ -110,8 +110,8 @@
     </div>
   </div>
 
-  <div class="location-row single-row">
-    <div class="location-row__left">
+  <div class="benitses-row single-row">
+    <div class="benitses-row__left">
       <h3 class="title"><?php the_field('location_title'); ?></h3>
       <h4 class="subtitle"><?php the_field('location_subtitle'); ?></h4>
       <?php the_field('location_content'); ?>
@@ -119,7 +119,7 @@
         href="<?php the_field('location_link','options'); ?>"><?php echo __('Learn More','bellavista'); ?></a>
       <!-- <img class="lozad" data-src="<?php echo get_stylesheet_directory_uri();?>/images/olive-branch-2.png"> -->
     </div>
-    <div class="location-row__right">
+    <div class="benitses-row__right">
       <?php $image = get_field('location_image'); ?>
       <img class="lozad" width='768' height='512' data-src="<?php echo $image['sizes']['mobile']; ?>"
         alt="<?php echo $image['alt'] ?>">

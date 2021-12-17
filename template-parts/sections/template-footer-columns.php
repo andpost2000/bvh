@@ -18,7 +18,7 @@
 
     <div class="footer-columns__hover-content">
       <?php the_sub_field('content','options'); ?>
-      <a class="arrowLink lozad"
+      <a class="arrowLink arrowLink--white lozad"
         href="<?php the_sub_field('link','options'); ?>"><?php echo __('Learn More','bellavista'); ?></a>
     </div>
   </div>
