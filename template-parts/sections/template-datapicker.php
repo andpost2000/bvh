@@ -8,12 +8,6 @@
  */
 
 ?>
-
-<style>
-  .check-in-form-container {
-    display: none;
-  }
-</style>
 <div class="check-in-form-container">
 
   <form action="https://bellavistacorfu.reserve-online.net/" method="post" class="my-calendar-form" target="_blank">

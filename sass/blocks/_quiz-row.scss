@@ -1,0 +1,9 @@
+.quiz-row {
+  padding: 0 10px;
+}
+@media (min-width: 1280px) {
+  .quiz-row {
+    padding: 0;
+    margin: 0 40px;
+  }
+}

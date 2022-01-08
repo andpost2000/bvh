@@ -9,17 +9,14 @@
   opacity: 0;
   animation: openMenu 0.3s;
 
-  &.open {
-    display: block;
-    opacity: 1;
-  }
-
   .wpml-ls {
     width: 100%;
     border-left-color: var(--colorSecondary);
     border-right-color: var(--colorSecondary);
+
     &-item {
       width: 100%;
+
       a {
         position: relative;
         width: 100%;
@@ -43,8 +40,31 @@
         }
       }
     }
+
     &-current-language>a {
       color: var(--colorSecondary);
+    }
+  }
+}
+
+button.open+.lang-select {
+  display: block;
+  opacity: 1;
+}
+
+@media (min-width: 1280px) {
+  .lang-select {
+    bottom: unset;
+    top: 100%;
+
+    .wpml-ls {
+      border: 0;
+
+      a {
+        border-top: 1px solid #fff;
+        border-bottom-width: 0;
+        padding: 8px 5px 8px 30px;
+      }
     }
   }
 }

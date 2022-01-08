@@ -44,7 +44,7 @@
     border: 0;
     text-decoration: none;
     outline: none;
-    transition: 0.1s;
+    transition: 0.15s;
     cursor: pointer;
 
     .menu-main-lang-icon {
@@ -86,6 +86,10 @@
 
       .sideContent {
         width: auto;
+
+        .menu-main-item:first-child {
+          display: none;
+        }
 
         .menu-main-item {
           width: 60px;

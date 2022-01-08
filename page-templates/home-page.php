@@ -28,6 +28,10 @@
     </div>
   </div>
 
+  <div class="single-row quiz-row">
+    <?php echo do_shortcode('[WATU 1]') ?>
+  </div>
+
   <div class="welcome-row single-row">
     <div class="welcome-row__left">
       <?php $image = get_field('welcome_image_top'); ?>

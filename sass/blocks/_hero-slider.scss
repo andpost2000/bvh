@@ -1,5 +1,5 @@
 .hero-slider {
-  $slideHeight: 500px;
+  $slideHeight: 240px;
 
   padding-bottom: 20px;
   margin-bottom: 40px;
@@ -72,6 +72,19 @@
   }
 }
 
+@media (min-width: 768px) {
+  $slideHeight: 500px;
+  .hero-slider {
+    &__slick {
+      height: $slideHeight;
+    }
+
+    .slick-track {
+      height: $slideHeight;
+    }
+  }
+}
+
 @media (min-width: 1280px) {
   .hero-slider {
     width: calc(100% - 80px);
@@ -87,6 +100,7 @@
 
     .slick-next {
       right: -25px;
+
       &::before {
         color: #000;
         font-size: 30px;
@@ -96,6 +110,7 @@
 
     .slick-prev {
       left: -55px;
+
       &::before {
         color: #000;
         font-size: 30px;

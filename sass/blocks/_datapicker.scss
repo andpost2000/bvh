@@ -1,4 +1,5 @@
 .check-in-form-container {
+  display: none;
   position: absolute;
   z-index: -1;
   bottom: 100%;
@@ -8,11 +9,6 @@
   opacity: 0;
   box-shadow: 0 -3px 20px 3px rgba(0, 0, 0, 0.25);
   animation: openMenu 0.3s;
-
-  &.open {
-    display: block;
-    opacity: 1;
-  }
 
   .calendar-input-wrap {
     display: grid;
@@ -55,6 +51,23 @@
     &--second {
       justify-self: center;
     }
+  }
+}
+
+button.open+.check-in-form-container {
+  display: block;
+  opacity: 1;
+}
+
+@media (min-width: 1280px) {
+  .check-in-form-container {
+    left: unset;
+    right: 0;
+    bottom: unset;
+    width: 400px;
+    box-shadow: 0 23px 20px 3px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    border-top-right-radius: 0;
   }
 }
 
@@ -138,6 +151,26 @@
   left: 7px;
   bottom: -6px;
   transform: rotate(180deg);
+}
+
+@media (min-width: 1280px) {
+  .datepicker {
+    transform: translate(0, 7px);
+    &::after,
+    &::before {
+      transform: unset;
+      bottom: 100%;
+    }
+
+    &+& {
+      transform: translate(-30px, 7px);
+
+      &::after,
+      &::before {
+        left: 37px;
+      }
+    }
+  }
 }
 
 .datepicker>div {
