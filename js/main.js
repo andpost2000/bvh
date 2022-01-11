@@ -43,3 +43,16 @@ function onSubMenuLinkClick(evt) {
 subMenuLinks.forEach((subMenuLink) => {
   subMenuLink.addEventListener('click', onSubMenuLinkClick);
 });
+
+
+const startQuizBtn = document.querySelector('#start-quiz-btn');
+const closeQuizBtn = document.querySelector('#close-quiz-btn');
+const popupQuiz = document.querySelector('.quiz-row__popup');
+
+startQuizBtn.addEventListener('click', () => {
+  popupQuiz.classList.add('open');
+});
+
+closeQuizBtn.addEventListener('click', () => {
+  popupQuiz.classList.remove('open');
+});

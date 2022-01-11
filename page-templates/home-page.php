@@ -29,7 +29,31 @@
   </div>
 
   <div class="single-row quiz-row">
-    <?php echo do_shortcode('[WATU 1]') ?>
+    <h2>The Book-Launch Quiz</h2>
+    <p>To celebrate the launch of our book, When the Gods Came to Benitses, we have a special quiz with free holidays in Corfu up for grabs!</p>
+    <p>For each of the 12 chapters, there will be 7 questions with 1 winner randomly chosen for each chapter. The 12 winners get 7 nights free at the Bella Vista Hotel with an all-you-can-eat buffet breakfast included!</p>
+    <p>We’ve included a few excerpts below that you may be able to get your answers from. There might be some questions that require you to read the whole chapter, though.</p>
+    <p>You can purchase the first chapter, The Birth of Anthea, on its own here.</p>
+    <a href="#">[Buy First Chapter]</a>
+    <p>Or you can get the whole book here.</p>
+    <a href="#">[Buy the Book]</a>
+    <p><i>Remember, there will be eleven more quizzes where the book might come in handy...</i></p>
+    <h4>Excerpt 1</h4>
+    <p>“There weren’t many places Zeus could have a half-naked nymph on his lap without Hera threatening to kill them both. Benitses was one of those rare gems. Hera had no idea it existed, and that was just the way Zeus liked it.</p>
+    <p>Of course, escaping his headache of a wife wasn’t the only reason Zeus found Benitses so appealing. He only had to look at the clear water and the friendly people to feel like he was in Elysium. He could taste the potential. He’d already proven it could make money by setting up a little place called Zeus on the Beach. It had the four S’s in abundance: sun, sea, sand and sex. It was impossible not to make money.”</p>
+    <h4>Excerpt 2</h4>
+    <p>“A large fish in an onion, garlic and spicy tomato sauce stared up at him. Could this night get any better? Zeus shovelled a forkful into his mouth and his shoulders sagged. “Mmm…” He used his fork to point at the plate of bourdeto. “This… this is perfection.”</p>
+    <p>Poseidon went to take a bite of his own, but paused. He opened his mouth to speak, then paused again. “Have you seen Kerkyra today?””</p>
+    <h4>Excerpt 3</h4>
+    <p>“Zeus had experienced pain this severe only once before, when he birthed Athena, the goddess of wisdom, arts and war. Last time, Hephaestus had relieved him of his torment, but now, Poseidon was his only hope.</p>
+    <p>The sea god towered above him, trident in hand. “Hold still,” he said.</p>
+    <p>“You’re going to do it with that?”</p>
+    <button id="start-quiz-btn" class="btn btn--blue">Start quiz</button>
+
+    <div class="quiz-row__popup">
+    <button id="close-quiz-btn" class="quiz-row__popup-close"></button>
+      <?php echo do_shortcode('[WATU 1]') ?>
+    </div>
   </div>
 
   <div class="welcome-row single-row">
