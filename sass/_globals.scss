@@ -13,19 +13,31 @@ body {
 .btn {
   display: block;
   border: none;
-  padding: 5px 10px;
+  padding: 5px 20px;
   font-size: 14px;
   line-height: 26px;
   border-radius: 20px;
   text-align: center;
   text-decoration: none;
   font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
 .btn--blue {
   color: #fff;
   text-transform: uppercase;
   background-color: var(--colorSecondary);
+
+  &:hover {
+    filter: hue-rotate(20deg);
+    box-shadow: 0 2px 10px -5px #000;
+  }
+
+  &:active {
+    filter: hue-rotate(30deg);
+    box-shadow: 0 0 0 0 #000;
+  }
 }
 
 .arrowLink {
